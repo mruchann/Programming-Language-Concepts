@@ -1,0 +1,122 @@
+% ======
+% PART A
+% ======
+
+?- is_vote_wasted(pawnee, dentists_wealth_party).
+true.
+
+?- is_vote_wasted(pawnee, peoples_parks_party).
+false.
+
+% ======
+
+?- is_candidate_elected(leslie_knope, peoples_parks_party).
+true.
+
+?- is_candidate_elected(jeremy_jamm, dentists_wealth_party).
+false.
+
+?- is_candidate_elected(jerry_gerwich, peoples_parks_party).
+false.
+
+% ======
+
+?- candidate_count_from_city([jeremy_jamm, craig_middlebrooks, ben_wyatt, ingrid_de_forest], pawnee, Count).
+Count = 2.
+
+% ======
+% PART B
+% ======
+
+?- all_parties(ListOfPoliticalParties).
+ListOfPoliticalParties = [peoples_parks_party, peoples_wealth_party, dentists_wealth_party].
+
+?- all_parties([peoples_parks_party]).
+false.
+
+% ======
+
+?- all_candidates_from_party(peoples_parks_party, ListOfCandidates).
+ListOfCandidates = [leslie_knope, ben_wyatt, april_ludgate, tom_haverford, jerry_gerwich, craig_middlebrooks, douglass_howser].
+
+% ======
+
+?- all_elected_from_party(peoples_wealth_party, ListOfCandidates).
+ListOfCandidates = [ingrid_de_forest, lindsay_carlisle_shay, george_gernway, joan_callamezzo].
+
+% ======
+
+?- election_rate(peoples_wealth_party, Percentage).
+0.67
+Percentage = 0.6666666666666666.
+
+?- election_rate(peoples_parks_party, Percentage).
+0.86
+Percentage = 0.8571428571428571.
+
+?- election_rate(dentists_wealth_party, Percentage).
+0.00
+Percentage = 0.
+
+% ======
+
+?- council_percentage(peoples_parks_party, Percentage).
+0.60
+Percentage = 0.6.
+
+?- council_percentage(peoples_wealth_party, Percentage).
+0.40
+Percentage = 0.4.
+
+?- council_percentage(dentists_wealth_party, Percentage).
+0.00
+Percentage = 0.
+
+% ======
+% PART C
+% ======
+
+?- alternative_debate_setups(pdp, OrderedListOfCandidates).
+OrderedListOfCandidates = [leslie_knope, jeremy_jamm, ben_wyatt] ;
+OrderedListOfCandidates = [leslie_knope, jeremy_jamm, april_ludgate] ;
+OrderedListOfCandidates = [leslie_knope, jeremy_jamm, tom_haverford] ;
+OrderedListOfCandidates = [leslie_knope, jeremy_jamm, jerry_gerwich] ;
+OrderedListOfCandidates = [leslie_knope, jeremy_jamm, craig_middlebrooks] ;
+OrderedListOfCandidates = [leslie_knope, jeremy_jamm, douglass_howser] ;
+OrderedListOfCandidates = [ben_wyatt, jeremy_jamm, leslie_knope] ;
+OrderedListOfCandidates = [ben_wyatt, jeremy_jamm, april_ludgate] ;
+OrderedListOfCandidates = [ben_wyatt, jeremy_jamm, tom_haverford] ;
+OrderedListOfCandidates = [ben_wyatt, jeremy_jamm, jerry_gerwich] ;
+OrderedListOfCandidates = [ben_wyatt, jeremy_jamm, craig_middlebrooks] ;
+OrderedListOfCandidates = [ben_wyatt, jeremy_jamm, douglass_howser] ;
+OrderedListOfCandidates = [april_ludgate, jeremy_jamm, leslie_knope] ;
+OrderedListOfCandidates = [april_ludgate, jeremy_jamm, ben_wyatt] ;
+OrderedListOfCandidates = [april_ludgate, jeremy_jamm, tom_haverford] ;
+OrderedListOfCandidates = [april_ludgate, jeremy_jamm, jerry_gerwich] ;
+OrderedListOfCandidates = [april_ludgate, jeremy_jamm, craig_middlebrooks] ;
+OrderedListOfCandidates = [april_ludgate, jeremy_jamm, douglass_howser] ;
+OrderedListOfCandidates = [tom_haverford, jeremy_jamm, leslie_knope] ;
+OrderedListOfCandidates = [tom_haverford, jeremy_jamm, ben_wyatt] ;
+OrderedListOfCandidates = [tom_haverford, jeremy_jamm, april_ludgate] ;
+OrderedListOfCandidates = [tom_haverford, jeremy_jamm, jerry_gerwich] ;
+OrderedListOfCandidates = [tom_haverford, jeremy_jamm, craig_middlebrooks] ;
+OrderedListOfCandidates = [tom_haverford, jeremy_jamm, douglass_howser] ;
+OrderedListOfCandidates = [jerry_gerwich, jeremy_jamm, leslie_knope] ;
+OrderedListOfCandidates = [jerry_gerwich, jeremy_jamm, ben_wyatt] ;
+OrderedListOfCandidates = [jerry_gerwich, jeremy_jamm, april_ludgate] ;
+OrderedListOfCandidates = [jerry_gerwich, jeremy_jamm, tom_haverford] ;
+OrderedListOfCandidates = [jerry_gerwich, jeremy_jamm, craig_middlebrooks] ;
+OrderedListOfCandidates = [jerry_gerwich, jeremy_jamm, douglass_howser] ;
+OrderedListOfCandidates = [craig_middlebrooks, jeremy_jamm, leslie_knope] ;
+OrderedListOfCandidates = [craig_middlebrooks, jeremy_jamm, ben_wyatt] ;
+OrderedListOfCandidates = [craig_middlebrooks, jeremy_jamm, april_ludgate] ;
+OrderedListOfCandidates = [craig_middlebrooks, jeremy_jamm, tom_haverford] ;
+OrderedListOfCandidates = [craig_middlebrooks, jeremy_jamm, jerry_gerwich] ;
+OrderedListOfCandidates = [craig_middlebrooks, jeremy_jamm, douglass_howser] ;
+OrderedListOfCandidates = [douglass_howser, jeremy_jamm, leslie_knope] ;
+OrderedListOfCandidates = [douglass_howser, jeremy_jamm, ben_wyatt] ;
+OrderedListOfCandidates = [douglass_howser, jeremy_jamm, april_ludgate] ;
+OrderedListOfCandidates = [douglass_howser, jeremy_jamm, tom_haverford] ;
+OrderedListOfCandidates = [douglass_howser, jeremy_jamm, jerry_gerwich] ;
+OrderedListOfCandidates = [douglass_howser, jeremy_jamm, craig_middlebrooks] ;
+false.
